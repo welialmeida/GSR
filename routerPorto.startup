@@ -14,9 +14,31 @@ ip link set dev eth5 up
 route add default gw 172.17.2.42
 
 ############## protect aganist attack spoofing ################
-###iptables -A FORWARD -s 172.172.0/24 -i eth4 -j DROP
-####iptables -A FORWARD -s 192.168.0.0/26 -i eth4 -j DROP
+iptables -A FORWARD -i eth5 -s 172.17.2.0/24 -j DROP
+iptables -A FORWARD -i eth5 -s 192.168.0.0/26 -j DROP
 
+
+
+############## Firewall #######################################
+
+#Ip privados  sem acesso a internet com exceção aos docentes
+iptables -A FORWARD -s 192.168.0.0/29 o- eth5 -j DROP
+iptables -A FORWARD -s 192.168.0.8/29 o- eth5 -j DROP
+iptables -A FORWARD -s 192.168.0.16/29 o- eth5 -j DROP
+
+#Bloquear acesso do exterior a uma maquina com IP privado
+iptables -A FORWARD -i eth5 -d 192.168.0.0/26 -j DROP
+
+#nao pode ser possivel utilizar o proxy a partir do exterior
+iptables -A FORWARD -i eth5 -d 172.17.2.4 -j DROP
+
+#DNS não resolvido para fora da universidade
+
+#proteger Master-Slave
+
+
+
+#--------------------------------------------------------------
 
 /etc/init.d/dhcp3-server start
 /etc/init.d/zebra start
