@@ -13,9 +13,9 @@ ip link set dev eth5 up
 
 route add default gw 172.17.2.42
 
-############## protect aganist attack spoofing
-iptables -A FORWARD -s 172.172.0/24 -i eth4 -j DROP
-iptables -A FORWARD -s 192.168.0.0/26 -i eth4 -j DROP
+############## protect aganist attack spoofing ################
+###iptables -A FORWARD -s 172.172.0/24 -i eth4 -j DROP
+####iptables -A FORWARD -s 192.168.0.0/26 -i eth4 -j DROP
 
 
 /etc/init.d/dhcp3-server start
