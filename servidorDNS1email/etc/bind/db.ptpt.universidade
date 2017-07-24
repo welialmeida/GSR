@@ -1,0 +1,16 @@
+$TTL	60000
+@	IN	SOA	servidorDNS1email.universidade.ptpt	root.servidorDNS1email.universidade.ptpt(
+	2006031201; serial
+	28; refresh
+	14; retry
+	3600000; expire
+	0; negative cache ttl
+	)
+
+@ 	IN	NS	servidorDNS1email.universidade.ptpt
+servidorDNS1email	IN	A	172.17.2.2
+servidorHTTP		IN	A	172.17.2.3
+servirdorProxyHTTP	IN	A	172.17.2.4
+
+servidorDNS2		IN	A	192.168.0.10
+servidorBackup		IN	A	192.168.0.11
