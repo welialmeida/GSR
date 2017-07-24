@@ -5,8 +5,8 @@ ip link set dev eth1 up
 
 iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
 
-ip route add 172.17.2.0/28 via 172.17.2.41
-ip route add 192.168.0.24/28 via 172.17.2.41
-ip route add 192.168.0.32/28 via 172.17.2.41
+ip route add 172.17.2.0/26 via 172.17.2.41
+ip route add 192.168.0.24/29 via 172.17.2.41
+ip route add 192.168.0.32/29 via 172.17.2.41
 
 route add default gw 192.168.100.2
