@@ -1,6 +1,6 @@
 ip addr add dev eth0 172.17.2.46/30
 ip addr add dev eth1 192.168.0.9/29
-ip addr add dev eth2 172.17.2.25/29
+ip addr add dev eth2 192.168.0.33/29
 ip addr add dev eth3 172.17.2.33/29
 ip addr add dev eth4 192.168.0.17/29
 ip link set dev eth0 up
