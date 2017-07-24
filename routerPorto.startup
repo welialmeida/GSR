@@ -1,0 +1,14 @@
+ip addr add dev eth0 172.17.2.1/29
+ip addr add dev eth1 172.17.2.9/29
+ip addr add dev eth2 172.17.2.17/29
+ip addr add dev eth3 192.168.0.1/29
+ip addr add dev eth4 172.17.2.45/30
+ip addr add dev eth5 172.17.2.41/30
+ip link set dev eth0 up
+ip link set dev eth1 up
+ip link set dev eth2 up
+ip link set dev eth3 up
+ip link set dev eth4 up
+ip link set dev eth5 up
+
+/etc/init.d/dhcp3-server start

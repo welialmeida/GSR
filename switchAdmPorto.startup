@@ -1,0 +1,8 @@
+ip link set dev eth0 up
+ip link set dev eth1 up
+ip link set dev eth2 up
+brctl addbr br6
+brctl addif br6 eth0
+brctl addif br6 eth1
+brctl addif br6 eth2
+ip link set dev br6 up
