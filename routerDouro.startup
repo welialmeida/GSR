@@ -13,3 +13,7 @@ route add default gw 172.17.2.45
 
 /etc/init.d/dhcp3-server start
 /etc/init.d/zebra start
+
+#proteger Master-Slave
+iptables -A FORWARD -s !172.17.2.2 -d 192.168.0.10 -p udp --dport 53 -j DROP
+iptables -A FORWARD -s !172.17.2.2 -d 192.168.0.10 -p tcp --dport 53 -j DROP

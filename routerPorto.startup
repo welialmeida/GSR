@@ -34,10 +34,6 @@ iptables -A FORWARD -i eth5 -d 172.17.2.4 -j DROP
 
 #DNS não resolvido para fora da universidade
 
-#proteger Master-Slave
-
-
-
 #--------------------------------------------------------------
 
 /etc/init.d/dhcp3-server start
