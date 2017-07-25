@@ -1,0 +1,29 @@
+$TTL	1D
+@	IN	SOA	servidorDNS1email.universidade.ptpt	root.servidorDNS1email.universidade.ptpt(
+	2016032419      ; Serial
+        3H              ; Refresh 3 hours
+        1H              ; Retry 1 hour
+        3W              ; Expire 3 weeks
+        1D              ; Minimum 1 day
+	)
+
+ 	IN	NS	servidorDNS1email.universidade.ptpt.
+
+	IN	NS	servidorDNS2.universidade.ptpt.
+
+$ORIGIN 0-39.0.168.192.in-addr.arpa.
+
+
+2	PTR	portoAdmPC1.universidade.ptpt.
+3	PTR	portoAdmPC2.universidade.ptpt.
+10	PTR	servidorDNS2.universidade.ptpt.
+11	PTR	servidorBackup.universidade.ptpt.
+18	PTR	douroAdmPC1.universidade.ptpt.
+19	PTR	douroAdmPC2.universidade.ptpt.
+26	PTR	portoDocPC1.universidade.ptpt.
+27	PTR	portoDocPC2.universidade.ptpt.
+34	PTR	douroDocPC1.universidade.ptpt.
+35	PTR	douroDocPC2.universidade.ptpt.
+
+
+

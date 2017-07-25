@@ -9,8 +9,33 @@ $TTL	60000
 
 @ 	IN	NS	servidorDNS1email.universidade.ptpt
 
+universidade.ptpt.	IN	NS	servidorDNS2.universidade.ptpt.
+
+@		IN	MX 5	mail.universidade.ptpt
+
+imap		IN	A	172.17.2.2
+pop		IN	A	172.17.2.2
+mail		IN 	A 	172.17.2.2
+
+
 servidorDNS1email	IN	A	172.17.2.2
 servidorHTTP		IN	A	172.17.2.3
-servirdorProxyHTTP	IN	A	172.17.2.4
+servidorProxyHTTP	IN	A	172.17.2.4
 servidorDNS2		IN	A	192.168.0.10
 servidorBackup		IN	A	192.168.0.11
+routerPorto		IN	A	172.17.2.1
+routerDouro		IN	A	172.17.2.46
+
+douroAdmPC1		IN	A	192.168.0.18
+douroAdmPC2		IN	A	192.168.0.19
+douroAluPC1		IN	A	172.17.2.34
+douroAluPC2		IN	A	172.17.2.35
+douroDocPC1		IN	A	192.168.0.34
+douroDocPC2		IN	A	192.168.0.35
+
+portoAdmPC1		IN	A	192.168.0.2
+portoAdmPC2		IN	A	192.168.0.3
+portoAluPC1		IN 	A	172.17.2.18
+portoAluPC2		IN 	A	172.17.2.19
+portoDocPC1		IN	A	192.168.0.26
+portoDocPC2		IN	A	192.168.0.27
